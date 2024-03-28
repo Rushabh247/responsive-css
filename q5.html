@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Grid</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        text-decoration: underline;
+        font-style: italic;
+      }
+      .grid-container {
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        padding: 10px;
+      }
+
+      .grid-item {
+        padding: 2px;
+        height: 250px;
+        text-align: center;
+        border-radius: 20px;
+      }
+
+      .grid-item > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        border: 3px solid black;
+      }
+
+      @media (max-width: 768px) {
+        .grid-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Random Images</h1>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img
+          src="https://images.pexels.com/photos/11073147/pexels-photo-11073147.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          alt="Image-01"
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          src="https://images.pexels.com/photos/18946129/pexels-photo-18946129/free-photo-of-trunk-of-a-young-tree-with-smooth-bark-and-dark-branches.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          alt="Image-02"
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="Image-03"
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          src="https://images.pexels.com/photos/17738649/pexels-photo-17738649/free-photo-of-cakes-on-tray.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          alt="Image-04"
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          src="https://images.pexels.com/photos/20621030/pexels-photo-20621030/free-photo-of-candle-for-hope.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          alt="Image-05"
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          src="https://images.pexels.com/photos/20623968/pexels-photo-20623968/free-photo-of-a-robin-sits-on-top-of-a-bush-in-autumn.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          alt="Image-06"
+        />
+      </div>
+    </div>
+  </body>
+</html>
